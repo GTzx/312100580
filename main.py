@@ -13,7 +13,7 @@ def read_file(file_path):
         return FileNotFoundError
 
 def preprocess(text):
-# 去除标点符号和转换为小写字母
+# 去除标点符号和空格，转换为小写字母
     text = text.translate(str.maketrans('', '', string.punctuation)).lower().replace(' ', '')
     return text
 
@@ -51,6 +51,8 @@ def main():
     # 写入答案文件
     with open(output_path, 'w', encoding='utf-8') as output_file:
         output_file.write(f"{plagiarism_percentage:.2%}")
+
+    # profiler.print_stats(sort='cumulative')
 
 if __name__ == "__main__":
     main()
