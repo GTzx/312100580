@@ -8,6 +8,7 @@
 
 用法: python main.py 原文文件 抄袭版文件 答案文件
 
+注意：虽然在文件夹中有requirements.txt，但由于程序中所用的库均为python内置的，所以requirements.txt里内容为空，在此进行说明。
 
 原文件orig.txt与其余抄袭文件的重复率为
 
